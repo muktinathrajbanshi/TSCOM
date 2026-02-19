@@ -1,44 +1,29 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
+    // Source and output directories
     "rootDir": "./src",
     "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // JavaScript version for modern browsers
+    "target": "ESNext",
 
-    // Other Outputs
+    // Module system for browser modules
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    // Generate source maps for debugging
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
+    // Enable strict type checking
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+
+    // Skip checking library files to speed up compilation
+    "skipLibCheck": true
+  },
+
+  // Optional: include all TS files under src
+  "include": ["src/**/*"],
+
+  // Optional: exclude node_modules folder
+  "exclude": ["node_modules"]
 }
